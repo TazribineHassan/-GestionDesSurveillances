@@ -14,8 +14,5 @@ if(isset($_GET["page"])){
         echo "page not";
     }
 }else{
-    $home->index($page);
+    $home->index("index");
 }
-
-
-require_once("./Views/includes/footer.php");
