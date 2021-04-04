@@ -1,4 +1,6 @@
 <?php 
+
+require_once("./Views/includes/header.php");
 require("Controllers/HomeControllers.php");
 $pages = ["index"];
 
@@ -12,5 +14,8 @@ if(isset($_GET["page"])){
         echo "page not";
     }
 }else{
-    
+    $home->index($page);
 }
+
+
+require_once("./Views/includes/footer.php");
