@@ -1,4 +1,5 @@
 <?php 
+<<<<<<< HEAD
 
 require_once("./Views/includes/header.php");
 require("Controllers/HomeControllers.php");
@@ -16,3 +17,8 @@ if(isset($_GET["page"])){
 }else{
     $home->index("index");
 }
+=======
+session_start();
+header("Location: Controllers/indexControllers.php");
+?>
+>>>>>>> 3ec5f31b4199e84a762fef397ace878b8b63c144
