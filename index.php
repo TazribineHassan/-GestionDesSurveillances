@@ -12,5 +12,5 @@ if(isset($_GET["page"])){
         echo "page not";
     }
 }else{
-    
+    $home->index("index");
 }
