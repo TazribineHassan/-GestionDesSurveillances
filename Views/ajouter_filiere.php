@@ -6,40 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>ajouter</title>
+    <title>ajouter filiere</title>
 </head>
 <body>
     
 <div class="container p-5">
 
-<form action="../Controllers/ajouterProfController.php" method="post">
+<form action="../Controllers/ajouterFiliereController.php" method="post">
 
     <div class="form-group row">
-        <label for="nom" class="col-sm-2 col-form-label">Nom</label>
+        <label for="nomFiliere" class="col-sm-2 col-form-label">Nom Filiere</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name = "nom" id="nom" placeholder="Nom">
+            <input type="text" class="form-control" name = "nomFiliere" id="nomFiliere" placeholder="Nom Filiere">
         </div>
     </div>
     
     <div class="form-group row">
-        <label for="prenom" class="col-sm-2 col-form-label">Prenom</label>
+        <label for="chef" class="col-sm-2 col-form-label">Chef de Filiere</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name = "prenom" id="prenom" placeholder="Prenom">
+            <input type="text" class="form-control" name = "chef" id="chef" placeholder="Chef de Filiere">
         </div>
     </div>
-
-    <div class="form-group row">
-        <label for="mail" class="col-sm-2 col-form-label">E-mail</label>
-        <div class="col-sm-10">
-            <input type="mail" class="form-control" name = "mail" id="mail" placeholder="E-mail">
-        </div>
-    </div>
-
     
     <div class="form-group row">
-        <label for="tele" class="col-sm-2 col-form-label">Tel:</label>
+        <label for="niveau" class="col-sm-2 col-form-label">Niveau</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name = "tele" id="tele" placeholder="Tele">
+            <input type="number" class="form-control" name = "niveau" id="niveau" placeholder="Niveau">
         </div>
     </div>
 
