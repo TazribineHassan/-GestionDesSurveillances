@@ -1,6 +1,10 @@
 <?php
 require_once("../Models/connection.php");
 
+session_start();
+if(!$_SESSION['logged']){
+    header("location:../");
+}
 
 if(isset($_POST['add'])){
     $nomFiliere = $_POST['nomFiliere'];
@@ -17,10 +21,16 @@ if(isset($_POST['add'])){
     
     $result = $con->InsertRowIntoTable($table, $data);
     
-    if($result)
-        die("filiere inserted successfully");
-    else
-        die("filiere inserting the prof");
+    if($result){
+
+        $class = "success";
+        $msg = "La filiere a ete ajoute avec succe";
+    }
+    else{
+        
+        $class = "danger";
+        $msg = "Nous avons rencontre un probleme, veuillez ressayez plus tard";
+    }
 }
 
 require_once("../Views/ajouter_filiere.php");

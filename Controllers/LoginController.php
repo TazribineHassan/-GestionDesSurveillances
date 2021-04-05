@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 include '../Models/connection.php';
 
 class LoginController {

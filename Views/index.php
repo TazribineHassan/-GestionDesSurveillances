@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if($_SESSION['logged']){
+    header("location:../Controllers/HomeControllers.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

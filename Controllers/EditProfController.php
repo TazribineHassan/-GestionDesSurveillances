@@ -2,6 +2,11 @@
 
 include "../Models/connection.php";
 
+session_start();
+if(!$_SESSION['logged']){
+    header("location:../");
+}
+
 if(isset($_POST['edit'])){
     $id = $_POST['id'];
     $nom = $_POST['nom'];

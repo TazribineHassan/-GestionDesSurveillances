@@ -18,6 +18,12 @@ $profs = $con->SelectAllFromTable('prof');
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../App/CSS/style.css">
+    <style>
+                
+        #country-list{float:left;list-style:none;margin-top:-3px;padding:0;width:190px;position: absolute;}
+        #country-list li{padding: 10px; background: #eee;color:black}
+        #country-list li:hover{background:#aaa;cursor: pointer;color:black}
+    </style>
     <title>ajouter filiere</title>
 </head>
 <body>
@@ -31,7 +37,18 @@ $profs = $con->SelectAllFromTable('prof');
             </div>
         </div>
 </div>
-    <div class="p-4"></div>
+<div class="p-2"></div>
+    
+    <?php if(isset($msg)){ ?>
+                
+        <div id="alert" class="col-md-6 offset-3 alert alert-<?php echo $class; ?>"><?php echo $msg ?></div>
+        <script>setTimeout(function(){
+                       $('#alert').remove();
+                        }, 5000);
+            </script>
+    <?php }  ?>
+
+<div class="p-2"></div>
     <div class="container">
         <div class="card">
             <div class="card-header text-white text-center card-bg">
@@ -72,12 +89,10 @@ $profs = $con->SelectAllFromTable('prof');
                             <div class="row">
                                 <legend class="col-form-label col-sm-2 pt-0">Responsable</legend>
                                 <div class="col-sm-10 col-md-8">
-                                    <select class="custom-select mr-sm-2" required name="responsable">
-                                        <option selected>Responsable</option>
-                                        <?php foreach ($profs as $prof) {?>
-                                        <option value="<?php echo $prof['NOM'].' '.$prof['PRENOM']; ?>"> <?php echo $prof['NOM'].' '.$prof['PRENOM']; ?> </option>
-                                        <?php } ?>
-                                    </select>
+                                    <div class="frmSearch">
+                                        <input style="width:100%;" class = "form-control" type="text" name="responsable" id="search-box" required placeholder="Responsable de Module" />
+                                        <div id="suggesstion-box"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,6 +108,33 @@ $profs = $con->SelectAllFromTable('prof');
             </div>
         </div>
     </div>
+    <script src="../App/JS/jQuery.min.js"></script>
+    <script >
+
+        $(document).ready(function(e){
+        $("#search-box").keyup(function(){
+                $.ajax({
+                type: "POST",
+                url: "readRespoModule.php",
+                data:'keyword='+$(this).val(),
+                beforeSend: function(){
+                },
+                success: function(data){
+                    $("#suggesstion-box").show();
+                    $("#suggesstion-box").html(data);
+                }
+                });
+            });
+        })  
+
+        function selectCountry(val) {
+        $("#search-box").val(val);
+        $("#suggesstion-box").hide();
+        }
+
+
+    </script>
+    
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

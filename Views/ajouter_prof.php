@@ -20,7 +20,18 @@
             </div>
         </div>
     </div>
-    <div class="p-4"></div>
+    <div class="p-2"></div>
+    
+    <?php if(isset($msg)){ ?>
+                
+        <div id="alert" class="col-md-6 offset-3 alert alert-<?php echo $class; ?>"><?php echo $msg ?></div>
+        <script>setTimeout(function(){
+                       $('#alert').remove();
+                        }, 5000);
+            </script>
+    <?php }  ?>
+
+<div class="p-2"></div>
     <div class="container">
         <div class="card">
             <div class="card-header text-white text-center card-bg">
@@ -71,6 +82,7 @@
             </div>
         </div>
     </div>
+    <script src="../App/JS/jQuery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
