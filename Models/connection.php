@@ -1,10 +1,10 @@
 <?php 
 // echo "You're in";
 class ConnectionClass {
-   private $servername = "gestiondessurveillances";
+   private $servername = "localhost";
    private $username = "root";
    private $password = "";
-   private $dbname = "Noel";
+   private $dbname = "gestiondessurveillances";
 
    // getting the connection from the db
    public function getConnection()
