@@ -15,7 +15,7 @@
     <div class="jumbotron jumbotron-fluid  text-white  p-2">
         <div class="container col-md-12 ">
             <div class="row">
-                <div class="col-md-3 col-xs-12 p-4"><img alt="images/logo.png" class="img" src="images/logo.png"></div>
+                <div class="col-md-3 col-xs-12 p-4"><img alt="images/logo.png" class="img" src="../Views/images/logo.png"></div>
                 <div class="col-md-3 col-xs-12"></div>
                 <div class="col-md-6 col-xs-12 style"><p class="lead" >Bienvenue administrateur dans votre espace</p></div>
             </div>
@@ -33,10 +33,10 @@
                     <div class="col-md-3"></div>
                 </div>
             </div>
-            <div class="card-body" id="content"></div>
+            <div class="card-body col-md-12 col-sm-12" id="content"></div>
         </div>
     </div>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="../App/JS/jQuery.min.js"></script>
     <script src="../App/JS/script.js"></script>
