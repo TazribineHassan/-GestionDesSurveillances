@@ -30,7 +30,7 @@
 					<img src="../Views/images/img-02.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="" method="POST">
+				<form class="login100-form validate-form" action="../Controllers/loginController.php" method="POST">
 					<span class="login100-form-title">
 						ESPACE ADMINE
 					</span>
@@ -44,7 +44,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Mot de passe requis">
-						<input class="input100" type="password" name="pass" placeholder="Mot de passe">
+						<input class="input100" type="password" name="password" placeholder="Mot de passe">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
