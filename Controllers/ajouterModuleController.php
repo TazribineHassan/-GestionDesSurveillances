@@ -24,3 +24,4 @@ if(isset($_POST['add'])){
     else
         die("filiere inserting the prof");
 }
+require_once("../Views/ajouter_module.php");

@@ -23,3 +23,4 @@ if(isset($_POST['add'])){
     else
         die("erroe inserting the prof");
 }
+require_once("../Views/ajouter_prof.php");
