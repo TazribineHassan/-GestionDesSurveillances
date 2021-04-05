@@ -18,7 +18,7 @@ if($_POST['table'] == "prof"){
             <td>{$prof['TEL']}</td>
         </tr>";
     }
-    echo"<a href='#'><Button class='btn-style btn text-white m-3'>Ajouter professeur</Button></a>";
+    echo"<a href='ajouterProfController.php'><Button class='btn-style btn text-white m-3'>Ajouter professeur</Button></a>";
 }elseif($_POST['table'] == "filiere"){
     echo"<tr>
             <th>Nom de filière</th>
@@ -32,7 +32,7 @@ if($_POST['table'] == "prof"){
                 <td>{$file['NIVEAU']}</td>
             </tr>";
     }
-    echo"<a href='#' ><Button class='btn-style btn text-white m-3'>Ajouter une filière</Button></a>";   
+    echo"<a href='ajouterFiliereController.php' ><Button class='btn-style btn text-white m-3'>Ajouter une filière</Button></a>";   
 }elseif($_POST['table'] == "module"){ 
     echo"<tr>
             <th>Nom du modle </th>
@@ -48,7 +48,7 @@ if($_POST['table'] == "prof"){
                 <td><a href='moduleController.php?idModule={$module['ID_MODULE']}'>Accéder</a></td>
             </tr>";
     }
-    echo"<a href='#'><Button class='btn-style btn text-white m-3'>Ajouter un module</Button></a>";   
+    echo"<a href='ajouterModuleController.php'><Button class='btn-style btn text-white m-3'>Ajouter un module</Button></a>";   
 }
     ?>
 </table>     
