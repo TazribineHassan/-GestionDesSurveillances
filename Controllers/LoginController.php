@@ -14,13 +14,14 @@ class LoginController {
         foreach ($data as $row) {
             echo"dkhol";
             if(password_verify($password,$row['PASSWORD'])){
+                $_SESSION['logged'] = true;
                 header("Location:../Controllers/HomeControllers.php");
             }
             else{
-            die('username or password incorrect1');
+                $_SESSION['logged'] = false;
+                header("Location:../index.php");
             }
         }
-        die('username or password incorrect');
     }
 
 }
